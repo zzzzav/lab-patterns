@@ -1,4 +1,20 @@
 package ru.zvarko.pattern.creational.singleton;
 
-public class SimpleSingleton {
+import java.util.UUID;
+
+public class SimpleSingleton implements MySingleton {
+
+    private static final SimpleSingleton instance = new SimpleSingleton();
+
+    private SimpleSingleton() {
+
+    }
+
+    public String getUUID() {
+        return UUID.randomUUID().toString();
+    }
+
+    public static SimpleSingleton getInstance() {
+        return instance;
+    }
 }

@@ -2,19 +2,27 @@ package ru.zvarko.pattern.creational.singleton;
 
 import java.util.UUID;
 
-public class SimpleSingleton {
+public class StaticBlockSingleton implements MySingleton {
 
-    private static final SimpleSingleton instance = new SimpleSingleton();
+    private static StaticBlockSingleton instance;
 
-    private SimpleSingleton() {
+    private StaticBlockSingleton() {
 
+    }
+
+    static {
+        try {
+            instance = new StaticBlockSingleton();
+        } catch (Exception e){
+            throw new RuntimeException(e);
+        }
     }
 
     public String getUUID() {
         return UUID.randomUUID().toString();
     }
 
-    public static SimpleSingleton getInstance() {
+    public static StaticBlockSingleton getInstance() {
         return instance;
     }
 }
