@@ -1,8 +1,20 @@
+classpath
+.project
+.DS_Store
+soap.xml
+soap.txt
+.idea
+.iml
+*/target/*
+target/*
+*.iml
+.settings
 # Compiled class file
 *.class
 
 # Log file
 *.log
+*.log.json
 
 # BlueJ files
 *.ctxt
