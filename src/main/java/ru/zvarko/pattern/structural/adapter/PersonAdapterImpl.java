@@ -8,6 +8,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class PersonAdapterImpl implements PersonAdapter {
+
     public ThaiPerson getThaiPerson(ClassicPerson classicPerson) {
         String[] names = classicPerson.getFio().split(" +");
         int length = names.length;
@@ -68,6 +69,7 @@ public class PersonAdapterImpl implements PersonAdapter {
                 break;
             default:
                 gender = ClassicGender.UNKNOWN;
+                break;
         }
         return new ClassicPerson(fio, birthDate, gender);
     }
