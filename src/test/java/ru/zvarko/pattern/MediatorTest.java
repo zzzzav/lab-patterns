@@ -20,6 +20,6 @@ public class MediatorTest {
         mediator.addUser(user3);
         user1.send("hi all");
         user1.send("hi, user2", user2);
-        user1.send("hi, user2", user4);
+        user1.send("hi, user4", user4);
     }
 }
