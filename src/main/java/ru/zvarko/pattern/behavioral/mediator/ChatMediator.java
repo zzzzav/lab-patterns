@@ -7,7 +7,7 @@ public class ChatMediator implements Mediator {
     private List<User> users;
 
     public ChatMediator() {
-        this.users = new ArrayList<User>();
+        this.users = new ArrayList<>();
     }
 
     public void sendMessageTo(String message, User user) {
